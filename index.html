@@ -9,22 +9,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-TTJGSBT6');</script>
-    <!-- End Google Tag Manager -->
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTJGSBT6"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+    
 
     <script>
         function d2() {
-            window.location.replace('https://www.goxiss.com/?get=9B2FE');
+            window.location.replace('https://www.google.com');
         }
     </script>
 
@@ -1148,6 +1137,10 @@
             #faq h2 {
                 font-size: clamp(22px, 5vw, 30px);
             }
+            /* 手机底部固定悬浮按钮 - 在 768px 以下显示 */
+            .mobile-float-btn {
+                display: block;
+            }
         }
         @media (max-width:480px) {
             :root {
@@ -1208,9 +1201,8 @@
             .tl-row:nth-child(even) .tl-content {
                 margin-left: 42px;
             }
-            .mobile-float-btn {
-                display: block;
-            }
+            /* 移除 480px 下的重复定义，已在 768px 中统一控制 */
+            /* .mobile-float-btn { display: block; }  <- 已移除，由上方 768px 统一接管 */
         }
 
         /* ========== MOBILE FLOATING CTA ========== */
@@ -1274,12 +1266,10 @@
             <div class="container">
                 <div class="hero-text reveal">
                     <span class="pill">Flexibel · Remote · Ohne Erfahrung</span>
-                    <!-- 地点已从 Kolumbien 改为 Deutschland -->
                     <p class="hero-req">Sie benötigen lediglich <strong>23+ Jahre</strong> und müssen in <strong>Deutschland</strong> leben, um von Ihrem Smartphone aus Einkommen zu erzielen.</p>
                     <h1>Starten Sie Ihre <em>Teilzeitarbeit</em> – direkt vom Smartphone aus</h1>
                     <p>Flexible Arbeit von zu Hause, frei einteilbare Arbeitszeiten, neue Fähigkeiten entwickeln.</p>
                     <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-                    <!-- CTA-Hinweis – 新通用版本 -->
                     <div class="cta-hinweis">
                         ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
                     </div>
@@ -1329,7 +1319,6 @@
                     </div>
                     <div style="margin-top:4px">
                         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-                        <!-- CTA-Hinweis – 新通用版本 -->
                         <div class="cta-hinweis" style="margin-top:8px;">
                             ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
                         </div>
@@ -1377,7 +1366,6 @@
                         <h3>Noch heute starten – ganz unkompliziert</h3>
                         <p>Sie brauchen nur Ihr Smartphone und Internet. Kein Lebenslauf, keine Vorstellungsgespräche, keine festen Arbeitszeiten.</p>
                         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-                        <!-- CTA-Hinweis – 新通用版本 -->
                         <div class="cta-hinweis">
                             ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
                         </div>
@@ -1442,7 +1430,6 @@
                         <h3>Haben Sie weitere Fragen?</h3>
                         <p>Unser Support-Team hilft Ihnen gerne bei jedem Schritt weiter. Kontaktieren Sie uns per WhatsApp für persönliche Unterstützung.</p>
                         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-                        <!-- CTA-Hinweis – 新通用版本 -->
                         <div class="cta-hinweis">
                             ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
                         </div>
@@ -1498,7 +1485,6 @@
                 <h2>Starten Sie jetzt Ihre Reise</h2>
                 <p>Schließen Sie sich Tausenden von Menschen an, die bereits von zu Hause aus Einkommen mit FlexWork Pro erzielen.</p>
                 <button class="btn btn-white" onclick="d2()">Jetzt starten →</button>
-                <!-- CTA-Hinweis im dunklen Hintergrund (新通用版本) -->
                 <div class="cta-hinweis dark" style="max-width:440px; margin:12px auto 0; text-align:left;">
                     ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
                 </div>
@@ -1607,8 +1593,8 @@
 
     <!-- ====== MOBILE FLOATING CTA ====== -->
     <div class="mobile-float-btn">
+        <!-- 调用相同的 d2() 点击事件 -->
         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-        <!-- CTA-Hinweis – 新通用版本 (移动端) -->
         <div class="cta-hinweis" style="font-size:0.7rem; padding:6px 10px; background:#eef2ff; border-left-color:var(--accent); text-align:center;">
             ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
         </div>
