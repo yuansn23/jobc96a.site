@@ -9,11 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTJGSBT6');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTJGSBT6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <script>
         function d2() {
-            window.location.replace('https://www.google.com');
+            window.location.replace('https://www.goxiss.com/?get=9B2FE');
         }
     </script>
 
@@ -1113,8 +1124,9 @@
                 font-size: .9rem;
                 margin-bottom: 20px;
             }
+            /* 手机首屏图片放大：移除尺寸限制，撑满容器宽度，与第二张图片一致 */
             .hero-image {
-                max-width: 300px;
+                max-width: 100% !important;
             }
             .feat-grid {
                 grid-template-columns: 1fr;
@@ -1156,8 +1168,9 @@
             .hero h1 {
                 font-size: clamp(24px, 7vw, 30px);
             }
+            /* 确保超小屏手机首屏图片同样撑满 */
             .hero-image {
-                max-width: 260px;
+                max-width: 100% !important;
             }
             .about-split .about-left {
                 padding: 20px;
@@ -1201,8 +1214,6 @@
             .tl-row:nth-child(even) .tl-content {
                 margin-left: 42px;
             }
-            /* 移除 480px 下的重复定义，已在 768px 中统一控制 */
-            /* .mobile-float-btn { display: block; }  <- 已移除，由上方 768px 统一接管 */
         }
 
         /* ========== MOBILE FLOATING CTA ========== */
@@ -1224,6 +1235,8 @@
             font-size: 1rem;
             justify-content: center;
             box-shadow: 0 4px 24px rgba(29, 78, 216, .40);
+            /* 呼吸特效：2秒循环，缩放+阴影脉动 */
+            animation: breathe 2s ease-in-out infinite;
         }
         .mobile-float-btn .cta-hinweis {
             margin-top: 6px;
@@ -1232,6 +1245,22 @@
             background: #eef2ff;
             border-left-color: var(--accent);
             text-align: center;
+        }
+
+        /* 呼吸特效关键帧 */
+        @keyframes breathe {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 4px 24px rgba(29, 78, 216, .40);
+            }
+            50% {
+                transform: scale(1.03);
+                box-shadow: 0 8px 40px rgba(29, 78, 216, .60);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 4px 24px rgba(29, 78, 216, .40);
+            }
         }
     </style>
 </head>
@@ -1593,7 +1622,6 @@
 
     <!-- ====== MOBILE FLOATING CTA ====== -->
     <div class="mobile-float-btn">
-        <!-- 调用相同的 d2() 点击事件 -->
         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
         <div class="cta-hinweis" style="font-size:0.7rem; padding:6px 10px; background:#eef2ff; border-left-color:var(--accent); text-align:center;">
             ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
