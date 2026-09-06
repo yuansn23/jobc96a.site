@@ -1,0 +1,1582 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexWork Pro — Teilzeitarbeit von unterwegs</title>
+    <meta name="description" content="Professionelle Plattform für Remote-Arbeit. Flexible Arbeit von zu Hause aus, frei einteilbare Arbeitszeiten." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-TTJGSBT6');</script>
+<!-- End Google Tag Manager -->
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTJGSBT6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+    
+    <script>
+        function d2() {
+            window.location.replace('https://www.goxiss.com/?get=9B2FE');
+        }
+    </script>
+
+    <style>
+        /* ============================================
+           DESIGN SYSTEM — FlexWork Pro v2.2 · Compliance+
+           ============================================ */
+        :root {
+            --bg: #fafbfc;
+            --surface: #ffffff;
+            --ink: #12161f;
+            --ink-2: #374151;
+            --muted: #69707d;
+            --dim: #d7dae0;
+            --accent: #e87824;
+            --accent-h: #d06518;
+            --accent-l: #fef7f1;
+            --accent-bg: #fef3ea;
+            --dark: #0b1019;
+            --dark-2: #151d2b;
+            --dark-3: #1e293b;
+            --border: rgba(0, 0, 0, .055);
+            --border-m: rgba(0, 0, 0, .10);
+            --shadow-sm: 0 1px 3px rgba(11, 16, 25, .05);
+            --shadow-md: 0 4px 20px rgba(11, 16, 25, .07);
+            --shadow-lg: 0 16px 48px rgba(11, 16, 25, .10);
+            --radius-sm: 6px;
+            --radius-md: 14px;
+            --radius-lg: 22px;
+            --radius-xl: 32px;
+            --font-display: 'Outfit', system-ui, -apple-system, sans-serif;
+            --font-body: system-ui, -apple-system, 'Segoe UI', sans-serif;
+            --container: 1200px;
+            --nav-h: 64px;
+        }
+
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+        body {
+            background: var(--bg);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 15px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: .01ms !important;
+                transition-duration: .01ms !important;
+            }
+        }
+
+        /* Grain */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            opacity: .025;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        .container {
+            max-width: var(--container);
+            margin: 0 auto;
+            padding: 0 clamp(20px, 5vw, 44px);
+            position: relative;
+            z-index: 5;
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* ========== HEADER ========== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            height: var(--nav-h);
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, .82);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            transition: all .3s ease;
+        }
+        header.scrolled {
+            background: rgba(255, 255, 255, .96);
+            box-shadow: var(--shadow-sm);
+        }
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--ink);
+            letter-spacing: -.02em;
+        }
+        .logo em {
+            font-style: normal;
+            color: var(--accent);
+            font-weight: 800;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2px;
+        }
+        .nav-links a {
+            padding: 7px 16px;
+            border-radius: 100px;
+            font-size: .88rem;
+            font-weight: 500;
+            color: var(--ink-2);
+            transition: all .2s ease;
+            text-decoration: none;
+        }
+        .nav-links a:hover,
+        .nav-links a:focus-visible {
+            background: var(--accent-l);
+            color: var(--accent);
+        }
+        .nav-links a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--ink);
+            font-size: 1.3rem;
+            cursor: pointer;
+            padding: 8px;
+            border-radius: 8px;
+        }
+        .mobile-menu-btn:hover {
+            background: var(--accent-l);
+        }
+        .mobile-nav {
+            display: none;
+            position: fixed;
+            top: var(--nav-h);
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, .97);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 20px;
+            z-index: 99;
+            box-shadow: var(--shadow-lg);
+        }
+        .mobile-nav.active {
+            display: block;
+        }
+        .mobile-nav a {
+            display: block;
+            padding: 13px 10px;
+            font-weight: 500;
+            color: var(--ink-2);
+            border-radius: 8px;
+            font-size: .92rem;
+            transition: all .15s;
+            text-decoration: none;
+        }
+        .mobile-nav a:hover {
+            background: var(--accent-l);
+            color: var(--accent);
+        }
+
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            padding: 13px 26px;
+            border-radius: 100px;
+            font-weight: 600;
+            font-size: .92rem;
+            cursor: pointer;
+            border: none;
+            transition: all .25s cubic-bezier(.16, 1, .3, 1);
+            font-family: var(--font-body);
+            text-decoration: none;
+        }
+        .btn:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(232, 120, 36, .28);
+        }
+        .btn-primary:hover {
+            background: var(--accent-h);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(232, 120, 36, .38);
+        }
+        .btn-primary:active {
+            transform: translateY(0) scale(.98);
+        }
+        .btn-white {
+            background: #fff;
+            color: var(--ink);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+        }
+        .btn-white:hover {
+            background: #f5f5f5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, .13);
+        }
+
+        /* ========== DISCLAIMER — compliance badge ========== */
+        .disclaimer-micro {
+            font-size: .70rem;
+            color: rgba(255, 255, 255, .35);
+            line-height: 1.5;
+            margin-top: 12px;
+            max-width: 480px;
+            text-wrap: balance;
+        }
+        .disclaimer-micro a {
+            color: rgba(255, 255, 255, .45);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .disclaimer-micro a:hover {
+            color: #fff;
+        }
+        .disclaimer-micro.light {
+            color: var(--muted);
+        }
+        .disclaimer-micro.light a {
+            color: var(--muted);
+        }
+        .disclaimer-micro.light a:hover {
+            color: var(--ink);
+        }
+        .disclaimer-micro.dark-bg {
+            color: rgba(255, 255, 255, .30);
+        }
+        .disclaimer-micro.dark-bg a {
+            color: rgba(255, 255, 255, .40);
+        }
+        .disclaimer-micro.dark-bg a:hover {
+            color: #fff;
+        }
+        .disclaimer-inline {
+            display: block;
+            font-size: .68rem;
+            color: var(--muted);
+            margin-top: 6px;
+            line-height: 1.4;
+            text-wrap: balance;
+        }
+
+        /* ========== 1. HERO ========== */
+        .hero {
+            min-height: 100dvh;
+            display: flex;
+            align-items: center;
+            padding: calc(var(--nav-h) + 24px) 0 24px;
+            position: relative;
+            overflow: hidden;
+            background: var(--dark);
+            background-image: radial-gradient(ellipse 80% 70% at 75% 35%, rgba(232, 120, 36, .10) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 50% at 20% 80%, rgba(232, 120, 36, .05) 0%, transparent 60%);
+        }
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: clamp(32px, 6vw, 60px);
+            align-items: center;
+        }
+        .hero-text .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(232, 120, 36, .12);
+            color: var(--accent);
+            font-weight: 600;
+            font-size: .78rem;
+            padding: 5px 14px;
+            border-radius: 100px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(232, 120, 36, .18);
+        }
+        .hero-text .pill::before {
+            content: '';
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: #22c55e;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        .hero-req {
+            font-size: clamp(.88rem, 1.6vw, .98rem);
+            color: rgba(255, 255, 255, .65);
+            line-height: 1.6;
+            margin-bottom: 18px;
+            max-width: 460px;
+            text-wrap: balance;
+        }
+        .hero-req strong {
+            color: #ffb780;
+            font-weight: 700;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .35;
+            }
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(32px, 5.5vw, 56px);
+            font-weight: 800;
+            line-height: 1.06;
+            letter-spacing: -.035em;
+            color: #f0f2f7;
+            margin-bottom: 14px;
+        }
+        .hero h1 em {
+            font-style: normal;
+            color: var(--accent);
+        }
+        .hero p {
+            font-size: clamp(.9rem, 1.8vw, 1.05rem);
+            color: rgba(255, 255, 255, .50);
+            line-height: 1.65;
+            margin-bottom: 24px;
+            max-width: 420px;
+            text-wrap: balance;
+        }
+        .hero-image {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 24px 56px rgba(0, 0, 0, .50);
+            border: 1px solid rgba(255, 255, 255, .08);
+            max-width: 420px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ========== SECTION HEADERS ========== */
+        .sec-label {
+            display: inline-block;
+            font-size: .74rem;
+            font-weight: 600;
+            letter-spacing: .10em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-family: var(--font-body);
+        }
+
+        /* ========== 2. ABOUT ========== */
+        #about {
+            padding: clamp(40px, 7vw, 64px) 0 0;
+            background: var(--surface);
+        }
+        .about-intro-block {
+            text-align: center;
+            max-width: 740px;
+            margin: 0 auto clamp(32px, 5vw, 48px);
+        }
+        .about-intro-block h2 {
+            font-family: var(--font-display);
+            font-size: clamp(26px, 4.5vw, 38px);
+            font-weight: 700;
+            line-height: 1.14;
+            letter-spacing: -.025em;
+            margin-bottom: 14px;
+        }
+        .about-intro-block .lead {
+            font-size: 1.02rem;
+            color: var(--muted);
+            line-height: 1.7;
+            text-wrap: balance;
+        }
+        .about-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+            align-items: stretch;
+        }
+        .about-split .about-left {
+            padding: clamp(24px, 4vw, 44px);
+            background: var(--accent-bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 14px;
+        }
+        .about-split .about-right {
+            display: flex;
+            align-items: stretch;
+        }
+        .about-split .about-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            min-height: 350px;
+        }
+        .mission-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 10px 0;
+        }
+        .mission-row .mr-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            background: var(--surface);
+            box-shadow: var(--shadow-sm);
+        }
+        .mission-row h4 {
+            font-family: var(--font-display);
+            font-size: .95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+            color: var(--ink);
+        }
+        .mission-row p {
+            font-size: .84rem;
+            color: var(--muted);
+            line-height: 1.45;
+        }
+        .stats-inline {
+            display: flex;
+            gap: 28px;
+            margin-top: 4px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(232, 120, 36, .15);
+        }
+        .stats-inline .si-num {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--accent);
+            letter-spacing: -.02em;
+            display: block;
+        }
+        .stats-inline .si-lbl {
+            font-size: .78rem;
+            color: var(--muted);
+            font-weight: 500;
+        }
+
+        /* ========== 3. FEATURES ========== */
+        #why-choose {
+            padding: clamp(40px, 7vw, 64px) 0;
+            background: var(--bg);
+        }
+        #why-choose .sec-header {
+            margin-bottom: clamp(28px, 5vw, 40px);
+        }
+        #why-choose .sec-header h2 {
+            font-family: var(--font-display);
+            font-size: clamp(26px, 4.5vw, 38px);
+            font-weight: 700;
+            line-height: 1.14;
+            letter-spacing: -.025em;
+            margin-bottom: 10px;
+        }
+        #why-choose .sec-header p {
+            color: var(--muted);
+            font-size: 1rem;
+            max-width: 500px;
+        }
+        .feat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(14px, 2.5vw, 22px);
+        }
+        .feat-card {
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            padding: clamp(24px, 4vw, 36px);
+            border: 1px solid var(--border);
+            transition: all .3s cubic-bezier(.16, 1, .3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .feat-card:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+            border-color: transparent;
+        }
+        .feat-card .fc-num {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: .18;
+            line-height: 1;
+            margin-bottom: 14px;
+            letter-spacing: -.04em;
+        }
+        .feat-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -.01em;
+            color: var(--ink);
+            position: relative;
+        }
+        .feat-card p {
+            color: var(--muted);
+            line-height: 1.55;
+            font-size: .9rem;
+            position: relative;
+        }
+        .feat-card.accent {
+            background: var(--accent-bg);
+            border-color: rgba(232, 120, 36, .15);
+        }
+        .feat-card.accent .fc-num {
+            opacity: .30;
+            color: var(--accent);
+        }
+        .feat-img-row {
+            margin-top: clamp(32px, 5vw, 48px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(16px, 3vw, 24px);
+            align-items: center;
+        }
+        .feat-img-row img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        .feat-img-row .feat-img-info {
+            padding: clamp(16px, 3vw, 28px);
+        }
+        .feat-img-row .feat-img-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--ink);
+        }
+        .feat-img-row .feat-img-info p {
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            font-size: .92rem;
+        }
+
+        /* ========== 4. WORK ========== */
+        .work-section {
+            padding: clamp(40px, 7vw, 64px) 0;
+            background: var(--dark);
+            color: #fff;
+            overflow: hidden;
+        }
+        .work-section .sec-header {
+            margin-bottom: clamp(24px, 5vw, 36px);
+        }
+        .work-section .sec-label {
+            color: var(--accent);
+        }
+        .work-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(26px, 4.5vw, 38px);
+            font-weight: 700;
+            line-height: 1.14;
+            letter-spacing: -.025em;
+        }
+        .work-scroll {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 4px;
+            scrollbar-width: none;
+        }
+        .work-scroll::-webkit-scrollbar {
+            display: none;
+        }
+        .work-scroll-card {
+            flex: 0 0 clamp(260px, 32vw, 340px);
+            scroll-snap-align: start;
+            background: var(--dark-2);
+            border-radius: var(--radius-lg);
+            padding: clamp(22px, 4vw, 32px);
+            border: 1px solid rgba(255, 255, 255, .06);
+            transition: all .3s ease;
+        }
+        .work-scroll-card:hover {
+            background: var(--dark-3);
+            border-color: rgba(255, 255, 255, .12);
+            transform: translateY(-3px);
+        }
+        .work-scroll-card .wsc-num {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            opacity: .35;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        .work-scroll-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -.01em;
+        }
+        .work-scroll-card p {
+            color: rgba(255, 255, 255, .45);
+            line-height: 1.6;
+            font-size: .87rem;
+        }
+
+        /* ========== 5. FAQ ========== */
+        #faq {
+            padding: clamp(40px, 7vw, 64px) 0;
+            background: var(--surface);
+        }
+        #faq h2 {
+            font-family: var(--font-display);
+            font-size: clamp(26px, 4.5vw, 38px);
+            font-weight: 700;
+            line-height: 1.14;
+            letter-spacing: -.025em;
+            margin-bottom: clamp(24px, 4vw, 36px);
+        }
+        .faq-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(20px, 4vw, 40px);
+        }
+        .faq-left {
+            display: grid;
+            gap: 2px;
+        }
+        .faq-tab {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            padding: 15px 18px;
+            cursor: pointer;
+            font-family: var(--font-display);
+            font-size: .94rem;
+            font-weight: 500;
+            color: var(--ink-2);
+            border-radius: var(--radius-sm);
+            transition: all .2s ease;
+            letter-spacing: -.01em;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .faq-tab:hover {
+            background: var(--accent-l);
+            color: var(--ink);
+        }
+        .faq-tab:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: -2px;
+        }
+        .faq-tab .tab-arrow {
+            opacity: 0;
+            transition: all .2s ease;
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .faq-tab.active {
+            background: var(--accent-l);
+            color: var(--accent);
+            font-weight: 600;
+        }
+        .faq-tab.active .tab-arrow {
+            opacity: 1;
+        }
+        .faq-right {
+            background: var(--accent-bg);
+            border-radius: var(--radius-lg);
+            padding: clamp(22px, 4vw, 34px);
+            display: flex;
+            align-items: center;
+            min-height: 180px;
+        }
+        .faq-answer-panel {
+            width: 100%;
+        }
+        .faq-answer-panel .faq-a-title {
+            font-family: var(--font-display);
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--ink);
+        }
+        .faq-answer-panel .faq-a-body {
+            color: var(--muted);
+            line-height: 1.65;
+            font-size: .92rem;
+        }
+        .faq-img-row {
+            margin-top: clamp(28px, 5vw, 44px);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(18px, 3vw, 28px);
+            align-items: center;
+        }
+        .faq-img-row img {
+            width: 100%;
+            height: auto;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+        .faq-img-row .faq-img-info h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .faq-img-row .faq-img-info p {
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 16px;
+            font-size: .92rem;
+        }
+
+        /* ========== 6. STEPS ========== */
+        .steps-section {
+            padding: clamp(40px, 7vw, 64px) 0;
+            background: var(--bg);
+        }
+        .steps-section h2 {
+            font-family: var(--font-display);
+            font-size: clamp(26px, 4.5vw, 38px);
+            font-weight: 700;
+            line-height: 1.14;
+            letter-spacing: -.025em;
+            text-align: center;
+            margin-bottom: clamp(28px, 5vw, 44px);
+        }
+        .timeline {
+            max-width: 760px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1.5px;
+            background: var(--dim);
+            transform: translateX(-50%);
+        }
+        .tl-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: clamp(22px, 4vw, 44px);
+            align-items: start;
+            margin-bottom: clamp(20px, 4vw, 32px);
+            position: relative;
+        }
+        .tl-row:last-child {
+            margin-bottom: 0;
+        }
+        .tl-row .tl-dot {
+            position: absolute;
+            left: 50%;
+            top: 24px;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: var(--surface);
+            border: 2.5px solid var(--dim);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--accent);
+            transition: all .3s ease;
+        }
+        .tl-row:hover .tl-dot {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 8px rgba(232, 120, 36, .06);
+            transform: translate(-50%, -50%) scale(1.06);
+        }
+        .tl-row .tl-content {
+            padding: clamp(16px, 3vw, 26px);
+            background: var(--surface);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            transition: all .25s ease;
+        }
+        .tl-row .tl-content:hover {
+            box-shadow: var(--shadow-md);
+        }
+        .tl-row .tl-content h3 {
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: var(--ink);
+        }
+        .tl-row .tl-content p {
+            color: var(--muted);
+            line-height: 1.55;
+            font-size: .87rem;
+        }
+        .tl-row:nth-child(odd) .tl-content {
+            grid-column: 1;
+        }
+        .tl-row:nth-child(even) .tl-content {
+            grid-column: 2;
+        }
+        .tl-row:nth-child(odd) .tl-spacer {
+            grid-column: 2;
+        }
+        .tl-row:nth-child(even) .tl-spacer {
+            grid-column: 1;
+        }
+
+        /* ========== 7. CTA ========== */
+        .cta-finale {
+            padding: clamp(48px, 8vw, 80px) 0;
+            background: var(--dark);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-finale::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 50% 60% at 50% 40%, rgba(232, 120, 36, .10) 0%, transparent 65%);
+        }
+        .cta-finale h2 {
+            font-family: var(--font-display);
+            font-size: clamp(30px, 6vw, 60px);
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -.035em;
+            color: #f0f2f7;
+            margin-bottom: 16px;
+            position: relative;
+        }
+        .cta-finale p {
+            color: rgba(255, 255, 255, .42);
+            max-width: 440px;
+            margin: 0 auto 24px;
+            font-size: 1rem;
+            position: relative;
+        }
+
+        /* ========== FOOTER ========== */
+        footer {
+            background: #080c14;
+            color: rgba(255, 255, 255, .5);
+            padding: clamp(36px, 6vw, 56px) 0 clamp(20px, 4vw, 28px);
+        }
+        .footer-risk {
+            background: rgba(232, 120, 36, .06);
+            border: 1px solid rgba(232, 120, 36, .16);
+            padding: clamp(20px, 4vw, 30px);
+            border-radius: var(--radius-lg);
+            margin-bottom: 28px;
+        }
+        .footer-risk h3 {
+            color: var(--accent);
+            font-family: var(--font-display);
+            font-size: .95rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .footer-risk p {
+            font-size: .8rem;
+            margin-bottom: 7px;
+            line-height: 1.55;
+        }
+        .footer-risk p:last-child {
+            margin-bottom: 0;
+        }
+        .footer-nav {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
+        .footer-nav a {
+            color: rgba(255, 255, 255, .6);
+            font-weight: 500;
+            font-size: .85rem;
+            transition: color .2s;
+            text-decoration: none;
+        }
+        .footer-nav a:hover {
+            color: #fff;
+        }
+        .footer-legal {
+            border-top: 1px solid rgba(255, 255, 255, .06);
+            padding-top: 20px;
+        }
+        .footer-legal p {
+            font-size: .76rem;
+            margin-bottom: 6px;
+            line-height: 1.55;
+        }
+
+        /* ========== SCROLL REVEAL ========== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .65s cubic-bezier(.16, 1, .3, 1), transform .65s cubic-bezier(.16, 1, .3, 1);
+        }
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ========== RESPONSIVE ========== */
+        @media (max-width:1024px) {
+            .hero .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-text {
+                max-width: 100%;
+            }
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-image {
+                max-width: 320px;
+            }
+            .about-split {
+                grid-template-columns: 1fr;
+            }
+            .about-split .about-right {
+                order: -1;
+            }
+            .about-split .about-right img {
+                min-height: 260px;
+                max-height: 320px;
+            }
+            .feat-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .faq-2col {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            .faq-right {
+                min-height: auto;
+            }
+            .faq-img-row {
+                grid-template-columns: 1fr;
+            }
+            .faq-img-row .faq-img-info {
+                order: -1;
+            }
+            .feat-img-row {
+                grid-template-columns: 1fr;
+            }
+            .feat-img-row .feat-img-info {
+                order: -1;
+            }
+            .tl-row {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            .timeline::before {
+                left: 21px;
+            }
+            .tl-row .tl-dot {
+                left: 21px;
+                top: 20px;
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+            .tl-row:nth-child(odd) .tl-content,
+            .tl-row:nth-child(even) .tl-content {
+                grid-column: 1;
+                margin-left: 48px;
+            }
+            .tl-row .tl-spacer {
+                display: none;
+            }
+            .disclaimer-micro {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @media (max-width:768px) {
+            .nav-links {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            .hero {
+                min-height: auto;
+                padding: calc(var(--nav-h) + 20px) 0 32px;
+            }
+            .hero h1 {
+                font-size: clamp(26px, 7vw, 36px);
+            }
+            .hero p {
+                font-size: .9rem;
+                margin-bottom: 20px;
+            }
+            .hero-image {
+                max-width: 300px;
+            }
+            .feat-grid {
+                grid-template-columns: 1fr;
+            }
+            .stats-inline {
+                gap: 20px;
+                flex-wrap: wrap;
+            }
+            .work-scroll-card {
+                flex: 0 0 74vw;
+            }
+            .cta-finale h2 {
+                font-size: clamp(24px, 7vw, 38px);
+            }
+            .cta-finale p {
+                font-size: .92rem;
+            }
+            section[class] h2,
+            .about-intro-block h2,
+            #faq h2 {
+                font-size: clamp(22px, 5vw, 30px);
+            }
+        }
+        @media (max-width:480px) {
+            :root {
+                --nav-h: 56px;
+            }
+            body {
+                font-size: 14px;
+            }
+            .btn {
+                padding: 11px 22px;
+                font-size: .87rem;
+            }
+            .hero h1 {
+                font-size: clamp(24px, 7vw, 30px);
+            }
+            .hero-image {
+                max-width: 260px;
+            }
+            .about-split .about-left {
+                padding: 20px;
+            }
+            .about-split .about-right img {
+                min-height: 200px;
+                max-height: 250px;
+            }
+            .feat-card {
+                padding: 18px;
+            }
+            .faq-tab {
+                padding: 12px 14px;
+                font-size: .88rem;
+            }
+            .faq-right {
+                padding: 18px;
+            }
+            .tl-row .tl-content {
+                padding: 14px 16px;
+            }
+            .tl-row {
+                margin-bottom: 16px;
+            }
+            .footer-risk {
+                padding: 16px;
+            }
+            .container {
+                padding: 0 16px;
+            }
+            .timeline::before {
+                left: 18px;
+            }
+            .tl-row .tl-dot {
+                left: 18px;
+                width: 32px;
+                height: 32px;
+                font-size: .9rem;
+            }
+            .tl-row:nth-child(odd) .tl-content,
+            .tl-row:nth-child(even) .tl-content {
+                margin-left: 42px;
+            }
+            .mobile-float-btn {
+                display: block;
+            }
+        }
+
+        /* ========== MOBILE FLOATING CTA ========== */
+        .mobile-float-btn {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 95;
+            padding: 10px 16px 14px;
+            background: linear-gradient(0deg, rgba(255, 255, 255, .98) 70%, rgba(255, 255, 255, 0) 100%);
+            text-align: center;
+        }
+        .mobile-float-btn .btn {
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+            font-size: 1rem;
+            justify-content: center;
+            box-shadow: 0 4px 24px rgba(232, 120, 36, .40);
+        }
+        .mobile-float-btn .disclaimer-inline {
+            margin-top: 6px;
+            font-size: .62rem;
+            color: var(--muted);
+        }
+        @media (max-width:768px) {
+            .mobile-float-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="sr-only">Zum Hauptinhalt springen</a>
+
+    <!-- ====== HEADER ====== -->
+    <header id="header">
+        <div class="container">
+            <a href="#" class="logo">FlexWork<em>Pro</em></a>
+            <nav aria-label="Hauptnavigation">
+                <ul class="nav-links">
+                    <li><a href="#about">Über uns</a></li>
+                    <li><a href="#why-choose">So starten Sie</a></li>
+                    <li><a href="#faq">Häufige Fragen</a></li>
+                </ul>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menü" aria-expanded="false">☰</button>
+            </nav>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a href="#about" onclick="closeMobileMenu()">Über uns</a>
+            <a href="#why-choose" onclick="closeMobileMenu()">So starten Sie</a>
+            <a href="#faq" onclick="closeMobileMenu()">Häufige Fragen</a>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ====== 1. HERO — mit sichtbarem Disclaimer ====== -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-text reveal">
+                    <span class="pill">Flexibel · Remote · Ohne Erfahrung</span>
+                    <p class="hero-req">Sie benötigen lediglich <strong>23+ Jahre</strong> und müssen in <strong>Kolumbien</strong> leben, um von Ihrem Smartphone aus Einkommen zu erzielen.</p>
+                    <h1>Starten Sie Ihre <em>Teilzeitarbeit</em> – direkt vom Smartphone aus</h1>
+                    <p>Flexible Arbeit von zu Hause, frei einteilbare Arbeitszeiten, neue Fähigkeiten entwickeln.</p>
+                    <button class="btn btn-primary" onclick="d2()">Jetzt bewerben →</button>
+                    <!-- ✅ DISCLAIMER MICRO — sichtbar neben dem CTA -->
+                    <div class="disclaimer-micro dark-bg">
+                        ⚠️ Die Ergebnisse hängen vom individuellen Engagement ab. Diese Plattform bietet Möglichkeiten zur selbstständigen Tätigkeit, keine formelle Beschäftigung. <a href="#footer-disclaimer">AGB ansehen</a>
+                    </div>
+                </div>
+                <div class="hero-image reveal">
+                    <img src="img/4.jpg" alt="Remote-Arbeit vom Smartphone aus mit FlexWork Pro">
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 2. ABOUT ====== -->
+        <section id="about">
+            <div class="container">
+                <div class="about-intro-block reveal">
+                    <span class="sec-label">Über uns</span>
+                    <h2>Professionelle Plattform für Remote-Arbeit</h2>
+                    <p class="lead">Wir sind eine Dienstleistungsplattform, die sich auf Teilzeitarbeit im Internet konzentriert. Wir bieten flexible Remote-Arbeitsmöglichkeiten – direkt über das Smartphone, ohne spezifische Vorkenntnisse. So kann jeder einfach zusätzliches Einkommen erzielen und gleichzeitig berufliche Fähigkeiten ausbauen.</p>
+                </div>
+            </div>
+            <div class="about-split reveal">
+                <div class="about-left">
+                    <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:600;margin-bottom:4px;color:var(--ink)">Unsere Mission</h3>
+                    <div class="mission-row">
+                        <div class="mr-icon">🎯</div>
+                        <div>
+                            <h4>Zeitliche und finanzielle Freiheit</h4>
+                            <p>Mehr Menschen zu mehr Freiheit bei Zeit und Einkommen verhelfen</p>
+                        </div>
+                    </div>
+                    <div class="mission-row">
+                        <div class="mr-icon">⚡</div>
+                        <div>
+                            <h4>Einfache Bedienung</h4>
+                            <p>Einfache und leicht umsetzbare Teilzeit-Projekte anbieten</p>
+                        </div>
+                    </div>
+                    <div class="mission-row">
+                        <div class="mr-icon">🏆</div>
+                        <div>
+                            <h4>Vertrauenswürdige Plattform</h4>
+                            <p>Eine effiziente und zuverlässige Remote-Arbeitsplattform schaffen</p>
+                        </div>
+                    </div>
+                    <div class="stats-inline">
+                        <div><span class="si-num">10K+</span><span class="si-lbl">Aktive Nutzer</span></div>
+                        <div><span class="si-num">95%</span><span class="si-lbl">Zufriedenheitsrate</span></div>
+                    </div>
+                    <div style="margin-top:4px">
+                        <button class="btn btn-primary" onclick="d2()">Jetzt bewerben →</button>
+                        <!-- ✅ DISCLAIMER MICRO -->
+                        <span class="disclaimer-inline">⚠️ Variable Einkünfte · Kein formelles Arbeitsangebot.</span>
+                    </div>
+                </div>
+                <div class="about-right">
+                    <img src="img/2.jpg" alt="Professionelles Team von FlexWork Pro in einer modernen Arbeitsumgebung">
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 3. FEATURES ====== -->
+        <section id="why-choose">
+            <div class="container">
+                <div class="sec-header reveal">
+                    <span class="sec-label">Warum wir?</span>
+                    <h2>Alles, was Sie für den Start brauchen</h2>
+                    <p>Echte Flexibilität, keine komplizierten Voraussetzungen – von überall aus.</p>
+                </div>
+                <div class="feat-grid reveal">
+                    <div class="feat-card accent">
+                        <div class="fc-num">01</div>
+                        <h3>Remote-Arbeit, ohne das Haus zu verlassen</h3>
+                        <p>Alle Aufgaben lassen sich über das Smartphone erledigen – ohne Weg, jederzeit und überall arbeiten.</p>
+                    </div>
+                    <div class="feat-card">
+                        <div class="fc-num">02</div>
+                        <h3>Flexible Arbeitszeiten</h3>
+                        <p>Die Arbeitszeit liegt ganz bei Ihnen, passt sich jedem Lebensstil an – ohne Konflikte mit Studium oder Familie.</p>
+                    </div>
+                    <div class="feat-card">
+                        <div class="fc-num">03</div>
+                        <h3>Einfache Bedienung, keine Erfahrung nötig</h3>
+                        <p>Alle Aufgaben enthalten detaillierte Anleitungen, keine speziellen Fähigkeiten erforderlich.</p>
+                    </div>
+                    <div class="feat-card accent">
+                        <div class="fc-num">04</div>
+                        <h3>Sicher, zuverlässig, garantiert</h3>
+                        <p>Die Plattform arbeitet mit geprüften Unternehmen zusammen, transparente Abrechnung, pünktliche Zahlung, keine versteckten Gebühren.</p>
+                    </div>
+                </div>
+                <div class="feat-img-row reveal">
+                    <img src="img/1.jpg" alt="Vorteile der Remote-Arbeit mit FlexWork Pro">
+                    <div class="feat-img-info">
+                        <h3>Noch heute starten – ganz unkompliziert</h3>
+                        <p>Sie brauchen nur Ihr Smartphone und Internet. Kein Lebenslauf, keine Vorstellungsgespräche, keine festen Arbeitszeiten.</p>
+                        <button class="btn btn-primary" onclick="d2()">Jetzt bewerben →</button>
+                        <span class="disclaimer-inline">⚠️ Einkommen sind nicht garantiert und hängen von der individuellen Aktivität ab.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 4. WORK ====== -->
+        <section class="work-section">
+            <div class="container">
+                <div class="sec-header reveal">
+                    <span class="sec-label">Tätigkeitsfelder</span>
+                    <h2>Wählen Sie, was am besten zu Ihnen passt</h2>
+                </div>
+            </div>
+            <div class="work-scroll reveal" style="padding-left:max(20px,calc((100vw - var(--container))/2));padding-right:max(20px,calc((100vw - var(--container))/2))">
+                <div class="work-scroll-card">
+                    <div class="wsc-num">01</div>
+                    <h3>Datenverarbeitung</h3>
+                    <p>Einfache Aufgaben wie das Ausfüllen von Online-Formularen, Datenprüfung usw.</p>
+                </div>
+                <div class="work-scroll-card">
+                    <div class="wsc-num">02</div>
+                    <h3>Umfragen</h3>
+                    <p>Teilnahme an Marktforschung von Marken, Ausfüllen von Online-Umfragen mit Belohnung.</p>
+                </div>
+                <div class="work-scroll-card">
+                    <div class="wsc-num">03</div>
+                    <h3>Inhaltsprüfung</h3>
+                    <p>Prüfung von Bild-, Text- oder Videoinhalten gemäß den Plattformrichtlinien – leicht verständlich.</p>
+                </div>
+                <div class="work-scroll-card">
+                    <div class="wsc-num">04</div>
+                    <h3>Produktpromotion</h3>
+                    <p>Teilen Sie Produktinformationen in sozialen Netzwerken, helfen Sie Marken bei der Sichtbarkeit und erhalten Sie Provisionsbelohnungen.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 5. FAQ ====== -->
+        <section id="faq">
+            <div class="container">
+                <h2 class="reveal">Häufig gestellte Fragen</h2>
+                <div class="faq-2col reveal">
+                    <div class="faq-left" id="faqTabs">
+                        <button class="faq-tab active" data-faq="0">F1: Welche Voraussetzungen muss ich erfüllen? <span class="tab-arrow">→</span></button>
+                        <button class="faq-tab" data-faq="1">F2: Ist die Arbeit legal und regelkonform? <span class="tab-arrow">→</span></button>
+                        <button class="faq-tab" data-faq="2">F3: Wie werden die Einkünfte abgerechnet? <span class="tab-arrow">→</span></button>
+                        <button class="faq-tab" data-faq="3">F4: Gibt es Schulungen oder Anleitungen? <span class="tab-arrow">→</span></button>
+                    </div>
+                    <div class="faq-right" id="faqAnswer">
+                        <div class="faq-answer-panel">
+                            <div class="faq-a-title">Welche Voraussetzungen muss ich erfüllen?</div>
+                            <div class="faq-a-body">Sie benötigen lediglich ein Smartphone, eine stabile Internetverbindung und Zuverlässigkeit. Keine besonderen beruflichen Fähigkeiten erforderlich.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-img-row reveal">
+                    <img src="img/3.jpg" alt="Support und FAQ von FlexWork Pro">
+                    <div class="faq-img-info">
+                        <h3>Haben Sie weitere Fragen?</h3>
+                        <p>Unser Support-Team hilft Ihnen gerne bei jedem Schritt weiter. Kontaktieren Sie uns per WhatsApp für persönliche Unterstützung.</p>
+                        <button class="btn btn-primary" onclick="d2()">Jetzt bewerben →</button>
+                        <span class="disclaimer-inline">⚠️ Die Plattform garantiert kein Mindesteinkommen. Jede Aufgabe ist freiwillig und wird entsprechend ihrer Komplexität vergütet.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 6. STEPS ====== -->
+        <section class="steps-section">
+            <div class="container">
+                <h2 class="reveal">So werden Sie Teil von uns</h2>
+                <div class="timeline reveal">
+                    <div class="tl-row">
+                        <div class="tl-content">
+                            <h3>Konto erstellen</h3>
+                            <p>Klicken Sie auf den "WhatsApp"-Button auf der Seite und geben Sie Ihre Basisdaten ein</p>
+                        </div>
+                        <div class="tl-spacer"></div>
+                        <div class="tl-dot">1</div>
+                    </div>
+                    <div class="tl-row">
+                        <div class="tl-spacer"></div>
+                        <div class="tl-content">
+                            <h3>Registrierung abschließen</h3>
+                            <p>Führen Sie gemäß den Vorgaben der Plattform die einfache Identitätsprüfung durch, um die Sicherheit Ihres Kontos zu gewährleisten.</p>
+                        </div>
+                        <div class="tl-dot">2</div>
+                    </div>
+                    <div class="tl-row">
+                        <div class="tl-content">
+                            <h3>Los geht’s</h3>
+                            <p>Arbeiten Sie nach den Aufgabenanweisungen, senden Sie die Ergebnisse ein und warten Sie auf die Freigabe – dann erhalten Sie Ihre Vergütung.</p>
+                        </div>
+                        <div class="tl-spacer"></div>
+                        <div class="tl-dot">3</div>
+                    </div>
+                    <div class="tl-row">
+                        <div class="tl-spacer"></div>
+                        <div class="tl-content">
+                            <h3>Auszahlung</h3>
+                            <p>Nach der Freigabe können Sie jederzeit eine Auszahlung beantragen – schnelle Zahlung, einfache Verwertung.</p>
+                        </div>
+                        <div class="tl-dot">4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== 7. CTA FINALE ====== -->
+        <section class="cta-finale">
+            <div class="container reveal">
+                <h2>Starten Sie jetzt Ihre Reise</h2>
+                <p>Schließen Sie sich Tausenden von Menschen an, die bereits von zu Hause aus Einkommen mit FlexWork Pro erzielen.</p>
+                <button class="btn btn-white" onclick="d2()">Jetzt bewerben →</button>
+                <!-- ✅ DISCLAIMER MICRO im finalen CTA -->
+                <div class="disclaimer-micro dark-bg" style="margin:14px auto 0;max-width:440px;">
+                    ⚠️ Dies ist eine Möglichkeit zur selbstständigen Tätigkeit. Die Einkünfte sind weder fest noch garantiert. <a href="#footer-disclaimer" style="color:rgba(255,255,255,.45);">Weitere Informationen</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER — mit ausführlichem Disclaimer ====== -->
+    <footer id="footer-disclaimer">
+        <div class="container">
+            <!-- ✅ VOLLSTÄNDIGER DISCLAIMER — sichtbar und detailliert -->
+            <div class="footer-risk">
+                <h3>⚠️ Risikohinweis und Transparenz</h3>
+                <p><strong>Art der Tätigkeit:</strong> FlexWork Pro ist eine Plattform, die selbstständige Arbeitnehmer mit Projekten für digitale Aufgaben verbindet. Es handelt sich nicht um ein formelles Arbeitsangebot oder ein Arbeitsverhältnis. Die Teilnahme ist vollständig freiwillig.</p>
+                <p><strong>Variable Einkünfte:</strong> Die Einkünfte hängen ausschließlich von der Anzahl der erledigten Aufgaben und der Qualität der Arbeit ab. Es werden keine Mindest‑, Höchst‑ oder wiederkehrenden Einkünfte versprochen oder garantiert. Jeder Nutzer ist für seine eigene Leistung verantwortlich.</p>
+                <p><strong>Keine Erfolgsgarantie:</strong> Die Ergebnisse variieren je nach Einsatz, Zeitverfügbarkeit und Marktbedingungen. Die Erfahrungen anderer Nutzer sind nicht repräsentativ für die Ergebnisse, die jeder Einzelne erzielen kann.</p>
+                <p><strong>Steuererklärung:</strong> Jeder Nutzer ist selbst für die Erklärung seiner Einkünfte gemäß den Steuergesetzen seines Landes verantwortlich. FlexWork Pro behält keine Steuern im Namen der selbstständigen Arbeitnehmer ein.</p>
+                <p><strong>Datenschutz:</strong> Wir erheben und verarbeiten personenbezogene Daten gemäß den geltenden Datenschutzgesetzen. Ihre Daten sind geschützt und werden niemals an Dritte verkauft. Weitere Informationen finden Sie in unserer <a href="privacy.html" style="color:var(--accent);">Datenschutzerklärung</a>.</p>
+                <p><strong>Altersanforderung:</strong> Nutzer müssen mindestens 23 Jahre alt sein, um an den Arbeitsmöglichkeiten auf dieser Plattform teilnehmen zu können.</p>
+                <p style="margin-top:10px;font-size:.75rem;color:rgba(255,255,255,.35);">Mit dem Klick auf „Jetzt bewerben“ oder „Jetzt bewerben“ bestätigen Sie, dass Sie diesen Risikohinweis gelesen und akzeptiert haben.</p>
+            </div>
+
+            <div class="footer-nav">
+                <a href="privacy.html">Datenschutzerklärung</a>
+                <a href="terms.html">Nutzungsbedingungen</a>
+                <a href="#faq">Häufige Fragen</a>
+            </div>
+            <div class="footer-legal">
+                <p>© 2026 FlexWork Pro — Alle Rechte vorbehalten.</p>
+                <p style="font-size:.68rem;opacity:.5;">FlexWork Pro ist eine Plattform für unabhängige Dienstleistungen. Wir sind keine Arbeitsvermittlung und bieten keine Arbeitsverträge an.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ====== SCRIPTS ====== -->
+    <script>
+        function toggleMobileMenu() {
+            var n = document.getElementById('mobileNav'),
+                b = document.querySelector('.mobile-menu-btn');
+            n.classList.toggle('active');
+            var o = n.classList.contains('active');
+            b.setAttribute('aria-expanded', o);
+            b.textContent = o ? '✕' : '☰';
+        }
+
+        function closeMobileMenu() {
+            var n = document.getElementById('mobileNav'),
+                b = document.querySelector('.mobile-menu-btn');
+            n.classList.remove('active');
+            b.setAttribute('aria-expanded', 'false');
+            b.textContent = '☰';
+        }
+
+        /* FAQ 2-col */
+        var faqData = [
+            { q: 'Welche Voraussetzungen muss ich erfüllen?', a: 'Sie benötigen lediglich ein Smartphone, eine stabile Internetverbindung und Zuverlässigkeit. Keine besonderen beruflichen Fähigkeiten erforderlich.' },
+            { q: 'Ist die Arbeit legal und regelkonform?', a: 'Wir arbeiten mit geprüften Unternehmen zusammen, alle Aufgaben entsprechen den geltenden Gesetzen und Vorschriften – Sicherheit und Zuverlässigkeit sind gewährleistet.' },
+            { q: 'Wie werden die Einkünfte abgerechnet?', a: 'Die Einkünfte werden auf Basis des Einzelpreises der Aufgabe berechnet und nach Fertigstellung sofort abgerechnet. Es stehen mehrere Auszahlungsmethoden zur Verfügung – transparent und effizient.' },
+            { q: 'Gibt es Schulungen oder Anleitungen?', a: 'Ja! Für jedes neue Mitglied stellen wir detaillierte Anleitungen zur Verfügung, damit Sie die Arbeit reibungslos ausführen können.' }
+        ];
+
+        document.getElementById('faqTabs').addEventListener('click', function(e) {
+            var t = e.target.closest('.faq-tab');
+            if (!t) return;
+            var i = parseInt(t.getAttribute('data-faq'));
+            document.querySelectorAll('.faq-tab').forEach(function(x) { x.classList.remove('active'); });
+            t.classList.add('active');
+            document.getElementById('faqAnswer').innerHTML = '<div class="faq-answer-panel"><div class="faq-a-title">' +
+                faqData[i].q + '</div><div class="faq-a-body">' + faqData[i].a + '</div></div>';
+        });
+
+        /* Smooth scroll */
+        document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+            a.addEventListener('click', function(e) {
+                e.preventDefault();
+                var t = document.querySelector(this.getAttribute('href'));
+                if (t) window.scrollTo({ top: t.getBoundingClientRect().top + window.pageYOffset - 76,
+                    behavior: 'smooth' });
+            });
+        });
+
+        /* Header scroll */
+        var h = document.getElementById('header');
+        window.addEventListener('scroll', function() { h.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
+
+        /* Close mobile menu on outside click */
+        document.addEventListener('click', function(e) {
+            var n = document.getElementById('mobileNav'),
+                b = document.querySelector('.mobile-menu-btn');
+            if (n.classList.contains('active') && !n.contains(e.target) && !b.contains(e.target)) closeMobileMenu();
+        });
+
+        /* Scroll reveal */
+        (function() {
+            var o = new IntersectionObserver(function(e) {
+                e.forEach(function(el, i) {
+                    if (el.isIntersecting) {
+                        setTimeout(function() { el.target.classList.add('visible'); }, i * 45);
+                        o.unobserve(el.target);
+                    }
+                });
+            }, { threshold: .08, rootMargin: '0px 0px -28px 0px' });
+            document.querySelectorAll('.reveal').forEach(function(el) { o.observe(el); });
+        })();
+    </script>
+
+    <!-- ====== MOBILE FLOATING CTA ====== -->
+    <div class="mobile-float-btn">
+        <button class="btn btn-primary" onclick="d2()">Jetzt bewerben →</button>
+        <span class="disclaimer-inline">⚠️ Variable Einkünfte · Kein formelles Arbeitsangebot.</span>
+    </div>
+
+</body>
+</html>

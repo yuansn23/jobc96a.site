@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutzungsbedingungen - FlexWork Pro</title>
+    <style>
+        :root {
+            --deep-blue: #003366;
+            --ocean-blue: #0066cc;
+            --bright-yellow: #ffcc00;
+            --white: #ffffff;
+            --black: #000000;
+            --light-gray: #f8f9fa;
+            --dark-gray: #333333;
+            --gradient-1: linear-gradient(135deg, #003366, #0066cc);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--gradient-1);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+
+        .header-content h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 0.5rem;
+            color: var(--bright-yellow);
+        }
+
+        .header-content p {
+            font-size: clamp(1rem, 2.5vw, 1.2rem);
+            opacity: 0.9;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: var(--bright-yellow);
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: var(--white);
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .terms-section {
+            margin-bottom: 3rem;
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--bright-yellow);
+        }
+
+        .terms-section h2 {
+            color: var(--deep-blue);
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--light-gray);
+        }
+
+        .terms-section h3 {
+            color: var(--ocean-blue);
+            font-size: clamp(1.2rem, 2.5vw, 1.4rem);
+            margin: 2rem 0 1rem 0;
+        }
+
+        .terms-section p {
+            margin-bottom: 1rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+            text-align: justify;
+        }
+
+        .terms-section ul, .terms-section ol {
+            margin: 1rem 0 1rem 2rem;
+        }
+
+        .terms-section li {
+            margin-bottom: 0.5rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(0,102,204,0.05), rgba(255,204,0,0.05));
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid var(--ocean-blue);
+            margin: 1.5rem 0;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255,0,0,0.05), rgba(255,204,0,0.05));
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid #ff6b6b;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info {
+            background: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 1.5rem 0;
+        }
+
+        .contact-info strong {
+            color: var(--deep-blue);
+        }
+
+        .last-updated {
+            text-align: center;
+            font-style: italic;
+            color: var(--ocean-blue);
+            margin-bottom: 2rem;
+            font-size: clamp(0.9rem, 2vw, 1rem);
+        }
+
+        footer {
+            background: var(--gradient-1);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--bright-yellow);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--white);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            background: var(--white);
+        }
+
+        th, td {
+            border: 1px solid var(--light-gray);
+            padding: 0.8rem;
+            text-align: left;
+        }
+
+        th {
+            background: var(--ocean-blue);
+            color: var(--white);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .terms-section {
+                padding: 1.5rem;
+            }
+            
+            .terms-section ul, .terms-section ol {
+                margin-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Nutzungsbedingungen</h1>
+                <p>FlexWork Pro - Rechtliche Bestimmungen</p>
+                <a href="javascript:history.back()" class="back-link">← Zurück zur Hauptseite</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="last-updated">
+                <strong>Letzte Aktualisierung: Dezember 2024 | Inkrafttreten: 1. Dezember 2024</strong>
+            </div>
+
+            <div class="terms-section">
+                <h2>1. Vereinbarung zu den Bedingungen</h2>
+                <p>Diese Nutzungsbedingungen („Bedingungen“) stellen eine rechtsverbindliche Vereinbarung zwischen Ihnen („Nutzer“, „Sie“ oder „Ihr“) und FlexWork Pro („Unternehmen“, „wir“, „uns“ oder „unser“) dar, die Ihren Zugang und Ihre Nutzung unserer Plattform für Fernarbeit und damit verbundene Dienste regelt.</p>
+                
+                <div class="highlight-box">
+                    <p><strong>Wichtig:</strong> Durch den Zugriff auf unsere Website, die Erstellung eines Kontos oder die Nutzung unserer Dienste bestätigen Sie, dass Sie diese Bedingungen gelesen, verstanden haben und akzeptieren, daran gebunden zu sein. Wenn Sie mit diesen Bedingungen nicht einverstanden sind, dürfen Sie auf unsere Dienste nicht zugreifen oder sie nicht nutzen.</p>
+                </div>
+
+                <p>Diese Bedingungen gelten für alle Nutzer unserer Dienste, einschließlich, aber nicht beschränkt auf, Browser, Anbieter, Kunden, Händler und Inhaltsersteller.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>2. Beschreibung der Dienste</h2>
+                
+                <h3>2.1 Überblick über die Plattform</h3>
+                <p>FlexWork Pro betreibt eine Online-Plattform, die Einzelpersonen mit legitimen Möglichkeiten zur Fernarbeit verbindet, darunter:</p>
+                <ul>
+                    <li>Datenverarbeitungs- und Erfassungsaufgaben</li>
+                    <li>Teilnahme an Quizzen und Online-Umfragen</li>
+                    <li>Inhaltsprüfung und -moderation</li>
+                    <li>Produktwerbung und Marketing in sozialen Netzwerken</li>
+                    <li>Andere einfache, mobil kompatible Aufgaben</li>
+                </ul>
+
+                <h3>2.2 Verfügbarkeit der Dienste</h3>
+                <p>Unsere Dienste werden „nach Verfügbarkeit“ bereitgestellt. Wir behalten uns das Recht vor, jederzeit und ohne vorherige Ankündigung aus beliebigem Grund, einschließlich, aber nicht beschränkt auf Wartung, Aktualisierungen oder geschäftliche Entscheidungen, Aspekte unserer Dienste zu ändern, auszusetzen oder einzustellen.</p>
+
+                <h3>2.3 Funktionen der Plattform</h3>
+                <p>Unsere Plattform bietet:</p>
+                <ul>
+                    <li>System zur Aufgabenverteilung und -verwaltung</li>
+                    <li>Verfolgung von Einnahmen und Zahlungsabwicklung</li>
+                    <li>Benutzerverifizierung und Identitätsauthentifizierung</li>
+                    <li>Kommunikationstools für Support und Anleitung</li>
+                    <li>Leistungsüberwachung und Qualitätssicherung</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>3. Zulässigkeit und Kontoerstellung</h2>
+                
+                <h3>3.1 Altersanforderungen</h3>
+                <p>Sie müssen mindestens 18 Jahre alt sein, um unsere Dienste nutzen zu können. Mit der Nutzung unserer Plattform erklären und garantieren Sie, dass Sie diese Altersvoraussetzung erfüllen und die rechtliche Fähigkeit haben, diese Vereinbarung einzugehen.</p>
+
+                <h3>3.2 Registrierungsanforderungen</h3>
+                <p>Um auf unsere Dienste zugreifen zu können, müssen Sie:</p>
+                <ul>
+                    <li>Während der Registrierung genaue, aktuelle und vollständige Informationen bereitstellen</li>
+                    <li>Die Informationen Ihres Kontos rechtzeitig aktualisieren</li>
+                    <li>Unseren Identitätsprüfungsprozess abschließen</li>
+                    <li>Gültige Bankinformationen für die Zahlungsabwicklung angeben</li>
+                    <li>Einwilligen, Kommunikation über WhatsApp und E-Mail zu erhalten</li>
+                </ul>
+
+                <h3>3.3 Kontosicherheit</h3>
+                <p>Sie sind verantwortlich für:</p>
+                <ul>
+                    <li>Die Vertraulichkeit Ihrer Kontoanmeldeinformationen</li>
+                    <li>Alle Aktivitäten, die unter Ihrem Konto stattfinden</li>
+                    <li>Die unverzügliche Benachrichtigung über unberechtigte Nutzung</li>
+                    <li>Die Sicherheit Ihres Geräts und die Verhinderung unbefugten Zugriffs</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Sicherheitshinweis:</strong> Geben Sie Ihre Kontoanmeldeinformationen niemals an Dritte weiter. Wir werden Sie niemals per E-Mail oder Telefon nach Ihrem Passwort fragen.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>4. Pflichten und Verhalten der Nutzer</h2>
+                
+                <h3>4.1 Allgemeine Pflichten</h3>
+                <p>Als Nutzer unserer Plattform verpflichten Sie sich:</p>
+                <ul>
+                    <li>Jederzeit genaue und ehrliche Informationen anzugeben</li>
+                    <li>Zugewiesene Aufgaben sorgfältig und mit Liebe zum Detail zu erledigen</li>
+                    <li>Alle Aufgabenanweisungen und Qualitätsrichtlinien zu befolgen</li>
+                    <li>Umgehend auf Mitteilungen unseres Teams zu reagieren</li>
+                    <li>Probleme oder Bedenken unverzüglich zu melden</li>
+                    <li>In allen Interaktionen ein professionelles Verhalten zu wahren</li>
+                </ul>
+
+                <h3>4.2 Verbotene Aktivitäten</h3>
+                <p>Sie verpflichten sich ausdrücklich, NICHT:</p>
+                <ul>
+                    <li>Bei der Registrierung oder bei der Ausführung von Aufgaben falsche oder irreführende Informationen anzugeben</li>
+                    <li>Mehrere Konten zu erstellen oder automatisierte Tools/Roboter zu verwenden</li>
+                    <li>Den Zugang zu Ihrem Konto mit anderen zu teilen</li>
+                    <li>Zu versuchen, die Systeme der Plattform zu manipulieren oder zu täuschen</li>
+                    <li>Sich an betrügerischen Aktivitäten oder Geldwäsche zu beteiligen</li>
+                    <li>Geltende Gesetze oder Vorschriften zu verletzen</li>
+                    <li>Andere Nutzer oder unser Personal zu belästigen, zu bedrohen oder zu missbrauchen</li>
+                    <li>Unbefugten Zugriff auf unsere Systeme zu versuchen</li>
+                    <li>Unsere Plattform für illegale oder nicht genehmigte Zwecke zu nutzen</li>
+                </ul>
+
+                <h3>4.3 Qualitätsstandards</h3>
+                <p>Alle Arbeiten müssen unseren Qualitätsstandards entsprechen:</p>
+                <ul>
+                    <li>Genauigkeitsrate von mindestens 95 % für Datenerfassungsaufgaben</li>
+                    <li>Fertigstellung innerhalb der angegebenen Fristen</li>
+                    <li>Einhaltung aller bereitgestellten Richtlinien und Anweisungen</li>
+                    <li>Originalarbeit ohne Plagiat oder Kopie</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>5. Zahlungsbedingungen</h2>
+                
+                <h3>5.1 Verdienststruktur</h3>
+                <p>Die Vergütung wird berechnet auf der Grundlage von:</p>
+                <ul>
+                    <li>Erfolgreich abgeschlossenen und genehmigten Aufgaben</li>
+                    <li>Komplexität der Aufgabe und Zeitaufwand</li>
+                    <li>Qualität der eingereichten Arbeit</li>
+                    <li>Üblichen Marktpreisen für ähnliche Dienstleistungen</li>
+                </ul>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Art der Aufgabe</th>
+                                <th>Vergütungsspanne</th>
+                                <th>Typische Bearbeitungszeit</th>
+                                <th>Qualitätsanforderungen</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Dateneingabe</td>
+                                <td>$0,05 - $0,25 pro Eingabe</td>
+                                <td>2-5 Minuten</td>
+                                <td>Mindestens 95 % Genauigkeit</td>
+                            </tr>
+                            <tr>
+                                <td>Umfrageteilnahme</td>
+                                <td>$0,50 - $5,00 pro Umfrage</td>
+                                <td>5-30 Minuten</td>
+                                <td>Vollständige und ehrliche Antworten</td>
+                            </tr>
+                            <tr>
+                                <td>Inhaltsprüfung</td>
+                                <td>$0,10 - $0,50 pro Element</td>
+                                <td>1-3 Minuten</td>
+                                <td>Präzise Kategorisierung</td>
+                            </tr>
+                            <tr>
+                                <td>Produktwerbung</td>
+                                <td>$1,00 - $10,00 pro Kampagne</td>
+                                <td>10-60 Minuten</td>
+                                <td>Authentische Interaktion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>5.2 Zahlungsabwicklung</h3>
+                <ul>
+                    <li><strong>Zahlungsrhythmus:</strong> Die Vergütung wird wöchentlich jeden Freitag verarbeitet</li>
+                    <li><strong>Mindestauszahlung:</strong> Ein Kontostand von mindestens 10,00 $ USD ist erforderlich</li>
+                    <li><strong>Bearbeitungszeit:</strong> 3-5 Werktage für Banküberweisungen</li>
+                    <li><strong>Zahlungsmethoden:</strong> Banküberweisung, PayPal, digitale Geldbörsen (wo verfügbar)</li>
+                    <li><strong>Währung:</strong> Zahlungen erfolgen in USD oder dem Gegenwert in lokaler Währung</li>
+                </ul>
+
+                <h3>5.3 Steuerliche Verantwortung</h3>
+                <p>Sie sind allein verantwortlich für:</p>
+                <ul>
+                    <li>Die Meldung aller Einnahmen an die zuständigen Steuerbehörden</li>
+                    <li>Die Zahlung aller anwendbaren Steuern auf Ihre Einnahmen</li>
+                    <li>Die Führung von Aufzeichnungen über Ihre Arbeit und Zahlungen</li>
+                    <li>Die Beschaffung erforderlicher Lizenzen oder Genehmigungen</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Steuerhinweis:</strong> FlexWork Pro bietet keine Steuerberatung. Konsultieren Sie einen qualifizierten Steuerberater zu Ihren Verpflichtungen.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>6. Pflichten und Haftungsbeschränkungen der Plattform</h2>
+                
+                <h3>6.1 Unsere Verpflichtungen</h3>
+                <p>FlexWork Pro verpflichtet sich:</p>
+                <ul>
+                    <li>Legitime Arbeitsmöglichkeiten von verifizierten Geschäftspartnern bereitzustellen</li>
+                    <li>Zahlungen korrekt und fristgerecht abzuwickeln</li>
+                    <li>Die Sicherheit der Plattform und den Schutz der Nutzerdaten zu gewährleisten</li>
+                    <li>Kundenservice während der Geschäftszeiten anzubieten</li>
+                    <li>Eine faire Behandlung aller Nutzer zu gewährleisten</li>
+                </ul>
+
+                <h3>6.2 Einschränkungen der Dienste</h3>
+                <p>Wir garantieren nicht:</p>
+                <ul>
+                    <li>Die kontinuierliche Verfügbarkeit von Arbeitsmöglichkeiten</li>
+                    <li>Bestimmte Verdienstbeträge oder Einkommensniveaus</li>
+                    <li>Die Genehmigung aller eingereichten Arbeiten</li>
+                    <li>Ununterbrochenen Service oder fehlerfreien Betrieb</li>
+                    <li>Die Kompatibilität mit allen Geräten oder Internetverbindungen</li>
+                </ul>
+
+                <h3>6.3 Qualitätskontrolle</h3>
+                <p>Wir behalten uns das Recht vor:</p>
+                <ul>
+                    <li>Arbeiten zu überprüfen und abzulehnen, die nicht den Qualitätsstandards entsprechen</li>
+                    <li>Zusätzliche Verifizierungsmaßnahmen zu implementieren</li>
+                    <li>Anforderungen und Vergütungssätze zu ändern</li>
+                    <li>Konten bei Verstößen gegen die Richtlinien zu sperren oder zu kündigen</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>7. Geistige Eigentumsrechte</h2>
+                
+                <h3>7.1 Plattforminhalte</h3>
+                <p>Alle Inhalte unserer Plattform, einschließlich, aber nicht beschränkt auf:</p>
+                <ul>
+                    <li>Website-Design, Layout und Funktionalität</li>
+                    <li>Software, Algorithmen und technische Systeme</li>
+                    <li>Logos, Marken und Markenmaterialien</li>
+                    <li>Schulungsmaterialien und Dokumentation</li>
+                    <li>Aufgabenanweisungen und -richtlinien</li>
+                </ul>
+                <p>bleiben das alleinige Eigentum von FlexWork Pro oder unseren Lizenzgebern und sind durch Gesetze zum geistigen Eigentum geschützt.</p>
+
+                <h3>7.2 Nutzergenerierte Inhalte</h3>
+                <p>Durch das Einreichen von Arbeiten oder Inhalten über unsere Plattform:</p>
+                <ul>
+                    <li>Erteilen Sie uns eine Lizenz zur Nutzung, Änderung und Verbreitung Ihrer Einsendungen, soweit dies für den Betrieb des Dienstes erforderlich ist</li>
+                    <li>Erklären Sie, dass Sie das Recht haben, solche Inhalte einzureichen</li>
+                    <li>Stimmen Sie zu, dass Ihre Einsendungen keine Rechte Dritter verletzen</li>
+                    <li>Erkennen Sie an, dass abgeschlossene Arbeiten möglicherweise Eigentum unserer Geschäftspartner werden</li>
+                </ul>
+
+                <h3>7.3 Nutzungsbeschränkungen</h3>
+                <p>Sie dürfen nicht:</p>
+                <ul>
+                    <li>Inhalte unserer Plattform kopieren, reproduzieren oder verbreiten</li>
+                    <li>Rückentwicklung oder Versuch, den Quellcode zu extrahieren</li>
+                    <li>Unsere Marken oder Markenzeichen ohne Genehmigung verwenden</li>
+                    <li>Abgeleitete Werke auf der Grundlage unserer Plattform erstellen</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>8. Datenschutz und Datensicherheit</h2>
+                
+                <p>Ihre Privatsphäre ist uns wichtig. Die Erhebung, Nutzung und der Schutz Ihrer personenbezogenen Daten unterliegen unserer Datenschutzerklärung, die durch Bezugnahme in diese Bedingungen aufgenommen wird.</p>
+                
+                <h3>8.1 Datenerhebung</h3>
+                <p>Wir erheben die erforderlichen Informationen, um:</p>
+                <ul>
+                    <li>Ihre Identität und Zulässigkeit zu überprüfen</li>
+                    <li>Zahlungen abzuwickeln und Finanzunterlagen zu führen</li>
+                    <li>Mit Ihnen über Arbeitsmöglichkeiten zu kommunizieren</li>
+                    <li>Die Sicherheit der Plattform zu gewährleisten und Betrug zu verhindern</li>
+                    <li>Gesetzlichen und regulatorischen Anforderungen nachzukommen</li>
+                </ul>
+
+                <h3>8.2 Datensicherheit</h3>
+                <p>Wir implementieren Sicherheitsmaßnahmen auf Industrieniveau zum Schutz Ihrer Informationen, einschließlich Verschlüsselung, Zugriffskontrollen und regelmäßigen Sicherheitsaudits.</p>
+
+                <h3>8.3 Weitergabe an Dritte</h3>
+                <p>Wir können Ihre Informationen weitergeben an:</p>
+                <ul>
+                    <li>Legitime Geschäftspartner, die Arbeitsmöglichkeiten bereitstellen</li>
+                    <li>Zahlungsabwickler und Finanzinstitute</li>
+                    <li>Gesetzliche Behörden, wenn gesetzlich vorgeschrieben</li>
+                    <li>Dienstleister, die den Betrieb unserer Plattform unterstützen</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>9. Sperrung und Kündigung von Konten</h2>
+                
+                <h3>9.1 Kündigung durch den Nutzer</h3>
+                <p>Sie können Ihr Konto jederzeit kündigen durch:</p>
+                <ul>
+                    <li>Kontaktaufnahme mit unserem Kundenservice-Team</li>
+                    <li>Beantragung der Kontoschließung über Ihr Dashboard</li>
+                    <li>Vorab schriftliche Kündigung mit einer Frist von 7 Tagen</li>
+                </ul>
+
+                <h3>9.2 Kündigung durch das Unternehmen</h3>
+                <p>Wir können Ihr Konto sperren oder kündigen bei:</p>
+                <ul>
+                    <li>Verstoß gegen diese Nutzungsbedingungen</li>
+                    <li>Angabe falscher oder irreführender Informationen</li>
+                    <li>Beteiligung an betrügerischen oder illegalen Aktivitäten</li>
+                    <li>Schlechter Arbeitsqualität oder wiederholten Ablehnungen</li>
+                    <li>Belästigung anderer Nutzer oder des Personals</li>
+                    <li>Längeren Inaktivitätszeiträumen (mehr als 6 Monate)</li>
+                </ul>
+
+                <h3>9.3 Auswirkungen der Kündigung</h3>
+                <p>Nach der Kündigung:</p>
+                <ul>
+                    <li>Wird Ihr Zugang zur Plattform sofort widerrufen</li>
+                    <li>Ausstehende Zahlungen werden nach unserem Standardzeitplan bearbeitet</li>
+                    <li>Ihre Kontodaten werden gemäß gesetzlicher Vorschriften aufbewahrt</li>
+                    <li>Sie bleiben für ausstehende Verpflichtungen verantwortlich</li>
+                </ul>
+
+                <div class="warning-box">
+                    <p><strong>Wichtig:</strong> Eine Kündigung aus wichtigem Grund kann zum Verlust nicht ausgezahlter Einnahmen und zum dauerhaften Ausschluss von unserer Plattform führen.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>10. Haftungsausschlüsse und Haftungsbeschränkung</h2>
+                
+                <h3>10.1 Haftungsausschlüsse</h3>
+                <p>IM GESETZLICH ZULÄSSIGEN UMFANG WERDEN UNSERE DIENSTE „WIE BESEHEN“ UND „NACH VERFÜGBARKEIT“ OHNE GEWÄHRLEISTUNGEN JEGLICHER ART, WEDER AUSDRÜCKLICH NOCH KONKLUDENT, BEREITGESTELLT, EINSCHLIESSLICH, ABER NICHT BESCHRÄNKT AUF:</p>
+                <ul>
+                    <li>MARKTGÄNGIGKEIT ODER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK</li>
+                    <li>NICHTVERLETZUNG VON GEISTIGEN EIGENTUMSRECHTEN</li>
+                    <li>SICHERHEIT ODER FREIHEIT VON VIREN</li>
+                    <li>GENAUIGKEIT ODER VOLLSTÄNDIGKEIT DES INHALTS</li>
+                    <li>UNUNTERBROCHENEN ODER FEHLERFREIEN BETRIEB</li>
+                </ul>
+
+                <h3>10.2 Haftungsbeschränkung</h3>
+                <p>IN KEINEM FALL IST FLEXWORK PRO HAFTBAR FÜR:</p>
+                <ul>
+                    <li>MITTELBARE, ZUFÄLLIGE, BESONDERE ODER FOLGESCHÄDEN</li>
+                    <li>ENTGANGENE GEWINNE, EINNAHMEN ODER GESCHÄFTSMÖGLICHKEITEN</li>
+                    <li>DATENVERLUST ODER -BESCHÄDIGUNG</li>
+                    <li>GESCHÄFTSUNTERBRECHUNG ODER DIENSTUNTERBRECHUNG</li>
+                    <li>HANDLUNGEN ODER INHALTE DRITTER</li>
+                </ul>
+
+                <p>UNSERE GESAMTHAFTUNG ÜBERSTEIGT NICHT DEN BETRAG DER ZAHLUNGEN, DIE IN DEN 12 MONATEN VOR DEM ANSPRUCH AN SIE GELEISTET WURDEN.</p>
+
+                <h3>10.3 Freistellung</h3>
+                <p>Sie erklären sich damit einverstanden, FlexWork Pro von allen Ansprüchen, Schäden, Verlusten oder Aufwendungen freizustellen, die entstehen aus:</p>
+                <ul>
+                    <li>Ihrem Verstoß gegen diese Bedingungen</li>
+                    <li>Ihrer Nutzung unserer Dienste</li>
+                    <li>Ihrer Verletzung von Rechten Dritter</li>
+                    <li>Ihrem fahrlässigen oder vorsätzlichen Verhalten</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>11. Streitbeilegung</h2>
+                
+                <h3>11.1 Informelle Streitbeilegung</h3>
+                <p>Vor Einleitung formeller Verfahren erklären Sie sich bereit, Streitigkeiten über unseren Kundenservice zu lösen. Die meisten Probleme können durch direkte Kommunikation schnell behoben werden.</p>
+
+                <h3>11.2 Verbindliches Schiedsverfahren</h3>
+                <p>Jede Streitigkeit, die nicht informell gelöst werden kann, wird durch ein verbindliches Schiedsverfahren und nicht vor Gericht entschieden, es sei denn, Sie können Ihre Ansprüche vor einem Kleinklaimgericht geltend machen, sofern diese qualifizieren.</p>
+
+                <h3>11.3 Schiedsregeln</h3>
+                <ul>
+                    <li>Das Schiedsverfahren wird von der American Arbitration Association (AAA) durchgeführt</li>
+                    <li>Das Schiedsverfahren findet im Bundesstaat Ihres Wohnsitzes statt</li>
+                    <li>Die Entscheidung des Schiedsrichters ist endgültig und bindend</li>
+                    <li>Jede Partei trägt ihre eigenen Kosten und Anwaltsgebühren</li>
+                </ul>
+
+                <h3>11.4 Verzicht auf Sammelklagen</h3>
+                <p>Sie erklären sich damit einverstanden, dass jedes Schiedsverfahren nur in Ihrer individuellen Eigenschaft und nicht als Sammelklage oder repräsentatives Verfahren durchgeführt wird.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>12. Anwendbares Recht und Gerichtsstand</h2>
+                
+                <p>Diese Bedingungen unterliegen und werden ausgelegt nach dem Recht des Bundesstaates Delaware, USA, ohne Berücksichtigung seiner Kollisionsnormen.</p>
+                
+                <p>Für alle Streitigkeiten, die nicht dem Schiedsverfahren unterliegen, willigen Sie in die ausschließliche Zuständigkeit der Bundes- und Landesgerichte mit Sitz in Delaware ein.</p>
+
+                <h3>12.1 Internationale Nutzer</h3>
+                <p>Wenn Sie auf unsere Dienste von außerhalb der USA zugreifen, erkennen Sie an, dass:</p>
+                <ul>
+                    <li>Sie für die Einhaltung der lokalen Gesetze verantwortlich sind</li>
+                    <li>Einige Funktionen in Ihrer Gerichtsbarkeit möglicherweise nicht verfügbar sind</li>
+                    <li>Währungsumrechnungsgebühren auf Zahlungen anfallen können</li>
+                    <li>Steuerliche Verpflichtungen je nach Land variieren können</li>
+                </ul>
+            </div>
+
+            <div class="terms-section">
+                <h2>13. Änderungen der Bedingungen</h2>
+                
+                <p>Wir behalten uns das Recht vor, diese Bedingungen jederzeit zu ändern. Wenn wir Änderungen vornehmen:</p>
+                <ul>
+                    <li>Aktualisieren wir das Datum der „Letzten Aktualisierung“ am Anfang dieses Dokuments</li>
+                    <li>Benachrichtigen wir über unsere Plattform oder per E-Mail</li>
+                    <li>Geben wir Ihnen mindestens 30 Tage Zeit, um wesentliche Änderungen zu prüfen</li>
+                    <li>Ermöglichen wir Ihnen, Ihr Konto zu kündigen, wenn Sie mit den Änderungen nicht einverstanden sind</li>
+                </ul>
+
+                <p>Die fortgesetzte Nutzung unserer Dienste nach dem Inkrafttreten von Änderungen gilt als Ihre Zustimmung zu den geänderten Bedingungen.</p>
+
+                <div class="highlight-box">
+                    <p><strong>Hinweis:</strong> Es liegt in Ihrer Verantwortung, diese Bedingungen regelmäßig auf Änderungen zu überprüfen. Wir empfehlen, diese Seite zu kennzeichnen und regelmäßig einzusehen.</p>
+                </div>
+            </div>
+
+            <div class="terms-section">
+                <h2>14. Allgemeine Bestimmungen</h2>
+                
+                <h3>14.1 Vollständige Vereinbarung</h3>
+                <p>Diese Bedingungen zusammen mit unserer Datenschutzerklärung und allen anderen auf unserer Plattform veröffentlichten rechtlichen Hinweisen stellen die vollständige Vereinbarung zwischen Ihnen und FlexWork Pro dar.</p>
+
+                <h3>14.2 Salvatorische Klausel</h3>
+                <p>Wenn eine Bestimmung dieser Bedingungen für nicht durchsetzbar erklärt wird, bleiben die übrigen Bestimmungen in vollem Umfang wirksam.</p>
+
+                <h3>14.3 Verzicht</h3>
+                <p>Die unterlassene Durchsetzung eines Rechts oder einer Bestimmung dieser Bedingungen durch uns stellt keinen Verzicht auf dieses Recht oder diese Bestimmung dar.</p>
+
+                <h3>14.4 Abtretung</h3>
+                <p>Sie dürfen Ihre Rechte aus diesen Bedingungen ohne unsere schriftliche Zustimmung nicht abtreten oder übertragen. Wir können unsere Rechte und Pflichten ohne Einschränkung abtreten.</p>
+
+                <h3>14.5 Höhere Gewalt</h3>
+                <p>Wir haften nicht für Verzögerungen oder Nichterfüllung unserer Pflichten aufgrund von Umständen, die außerhalb unserer zumutbaren Kontrolle liegen, einschließlich Naturkatastrophen, behördlicher Maßnahmen oder technischer Ausfälle.</p>
+            </div>
+
+            <div class="terms-section">
+                <h2>15. Kontaktinformationen</h2>
+                
+                <p>Wenn Sie Fragen zu diesen Bedingungen haben oder aus anderen Gründen Kontakt aufnehmen möchten, nutzen Sie bitte die folgenden Informationen:</p>
+                
+                <div class="contact-info">
+                    <p><strong>Rechtsabteilung von FlexWork Pro</strong></p>
+                    <p><strong>E-Mail:</strong> legal@flexworkpro.com</p>
+                    <p><strong>Kundenservice:</strong> support@flexworkpro.com</p>
+                    <p><strong>WhatsApp:</strong> Verfügbar über unsere Hauptplattform</p>
+                    <p><strong>Postanschrift:</strong><br>
+                    FlexWork Pro Legal Department<br>
+                    123 Business Plaza, Suite 456<br>
+                    Digital City, DC 12345<br>
+                    USA</p>
+                    <p><strong>Geschäftszeiten:</strong> Montag bis Freitag, 9:00 – 18:00 Uhr (Eastern Time)</p>
+                    <p><strong>Antwortzeit:</strong> Wir bemühen uns, alle rechtlichen Anfragen innerhalb von 48 Stunden zu beantworten.</p>
+                </div>
+
+                <div class="highlight-box">
+                    <p><strong>Rechtlicher Hinweis:</strong> Für rechtliche Angelegenheiten nutzen Sie bitte unsere spezielle E-Mail-Adresse, um eine ordnungsgemäße Weiterleitung und rechtzeitige Bearbeitung zu gewährleisten.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="javascript:history.back()">Zurück zur Hauptseite</a>
+                <a href="#top">Datenschutzerklärung</a>
+                <a href="#top">Cookie-Richtlinie</a>
+                <a href="#top">Rechtliche Kontaktaufnahme</a>
+            </div>
+            <p>&copy; 2026 FlexWork Pro. Alle Rechte vorbehalten. | Diese Bedingungen sind rechtsverbindlich und durchsetzbar.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight current section in viewport
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.terms-section');
+            const scrollPos = window.scrollY + 100;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+                    // Could add visual indication of current section
+                }
+            });
+        });
+    </script>
+</body>
+</html>
