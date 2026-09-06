@@ -9,11 +9,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-   
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18261237913"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'AW-18261237913');
+</script>
+
+
+    <!-- Event snippet for 购买 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18261237913/wAZwCP-72u8cEJnB0YNE',
+      'transaction_id': '',
+      'event_callback': callback
+      // 'new_customer': true /* calculate dynamically, populate with true/false */,
+  });
+  return false;
+}
+</script>
+
+    
     <script>
         function d2() {
-            window.location.replace('https://www.google.com/?get=9B2FE');
+            gtag_report_conversion('https://lihi1.me/4oS0H');
+        //   window.location.replace('https://www.google.com/?get=9B2FE');
         }
     </script>
 
