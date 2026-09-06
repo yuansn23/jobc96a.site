@@ -9,7 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-   
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TTJGSBT6');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TTJGSBT6"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <script>
         function d2() {
             window.location.replace('https://www.goxiss.com/?get=9B2FE');
@@ -18,27 +30,27 @@
 
     <style>
         /* ============================================
-           DESIGN SYSTEM — FlexWork Pro v2.2 · Compliance+
+           DESIGN SYSTEM — FlexWork Pro v2.2 · Business Blue
            ============================================ */
         :root {
-            --bg: #fafbfc;
+            --bg: #f8fafc;
             --surface: #ffffff;
-            --ink: #12161f;
-            --ink-2: #374151;
-            --muted: #69707d;
-            --dim: #d7dae0;
-            --accent: #e87824;
-            --accent-h: #d06518;
-            --accent-l: #fef7f1;
-            --accent-bg: #fef3ea;
-            --dark: #0b1019;
-            --dark-2: #151d2b;
-            --dark-3: #1e293b;
+            --ink: #0f172a;
+            --ink-2: #1e293b;
+            --muted: #475569;
+            --dim: #cbd5e1;
+            --accent: #1d4ed8;
+            --accent-h: #1e40af;
+            --accent-l: #eff6ff;
+            --accent-bg: #eef2ff;
+            --dark: #0f172a;
+            --dark-2: #1e293b;
+            --dark-3: #334155;
             --border: rgba(0, 0, 0, .055);
             --border-m: rgba(0, 0, 0, .10);
-            --shadow-sm: 0 1px 3px rgba(11, 16, 25, .05);
-            --shadow-md: 0 4px 20px rgba(11, 16, 25, .07);
-            --shadow-lg: 0 16px 48px rgba(11, 16, 25, .10);
+            --shadow-sm: 0 1px 3px rgba(15, 23, 42, .05);
+            --shadow-md: 0 4px 20px rgba(15, 23, 42, .07);
+            --shadow-lg: 0 16px 48px rgba(15, 23, 42, .10);
             --radius-sm: 6px;
             --radius-md: 14px;
             --radius-lg: 22px;
@@ -233,12 +245,12 @@
         .btn-primary {
             background: var(--accent);
             color: #fff;
-            box-shadow: 0 4px 16px rgba(232, 120, 36, .28);
+            box-shadow: 0 4px 16px rgba(29, 78, 216, .28);
         }
         .btn-primary:hover {
             background: var(--accent-h);
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(232, 120, 36, .38);
+            box-shadow: 0 8px 24px rgba(29, 78, 216, .38);
         }
         .btn-primary:active {
             transform: translateY(0) scale(.98);
@@ -249,7 +261,7 @@
             box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
         }
         .btn-white:hover {
-            background: #f5f5f5;
+            background: #f5f7fb;
             transform: translateY(-2px);
             box-shadow: 0 8px 24px rgba(0, 0, 0, .13);
         }
@@ -259,34 +271,34 @@
             display: block;
             margin-top: 10px;
             padding: 8px 14px;
-            background: #fef3ea;
-            border-left: 4px solid #e87824;
+            background: #eef2ff;
+            border-left: 4px solid var(--accent);
             border-radius: 6px;
             font-size: 0.82rem;
             line-height: 1.5;
-            color: #374151;
+            color: #1e293b;
             font-weight: 500;
             text-align: left;
             max-width: 100%;
         }
         .cta-hinweis strong {
-            color: #b45309;
+            color: #1e40af;
         }
         .cta-hinweis .small {
             font-weight: 400;
             font-size: 0.75rem;
-            color: #6b7280;
+            color: #475569;
         }
         .cta-hinweis.dark {
             background: #1e293b;
-            border-left-color: #e87824;
+            border-left-color: #3b82f6;
             color: #e5e7eb;
         }
         .cta-hinweis.dark .small {
             color: #9ca3af;
         }
 
-        /* ========== DISCLAIMER MICRO (fallback, wird meist durch cta-hinweis ersetzt) ========== */
+        /* ========== DISCLAIMER MICRO ========== */
         .disclaimer-micro {
             font-size: .70rem;
             color: rgba(255, 255, 255, .35);
@@ -339,8 +351,8 @@
             position: relative;
             overflow: hidden;
             background: var(--dark);
-            background-image: radial-gradient(ellipse 80% 70% at 75% 35%, rgba(232, 120, 36, .10) 0%, transparent 55%),
-                radial-gradient(ellipse 50% 50% at 20% 80%, rgba(232, 120, 36, .05) 0%, transparent 60%);
+            background-image: radial-gradient(ellipse 80% 70% at 75% 35%, rgba(29, 78, 216, .10) 0%, transparent 55%),
+                radial-gradient(ellipse 50% 50% at 20% 80%, rgba(29, 78, 216, .05) 0%, transparent 60%);
         }
         .hero .container {
             display: grid;
@@ -352,14 +364,14 @@
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            background: rgba(232, 120, 36, .12);
+            background: rgba(29, 78, 216, .12);
             color: var(--accent);
             font-weight: 600;
             font-size: .78rem;
             padding: 5px 14px;
             border-radius: 100px;
             margin-bottom: 20px;
-            border: 1px solid rgba(232, 120, 36, .18);
+            border: 1px solid rgba(29, 78, 216, .18);
         }
         .hero-text .pill::before {
             content: '';
@@ -378,7 +390,7 @@
             text-wrap: balance;
         }
         .hero-req strong {
-            color: #ffb780;
+            color: #93c5fd;
             font-weight: 700;
         }
         @keyframes pulse {
@@ -523,7 +535,7 @@
             gap: 28px;
             margin-top: 4px;
             padding-top: 16px;
-            border-top: 1px solid rgba(232, 120, 36, .15);
+            border-top: 1px solid rgba(29, 78, 216, .15);
         }
         .stats-inline .si-num {
             font-family: var(--font-display);
@@ -606,7 +618,7 @@
         }
         .feat-card.accent {
             background: var(--accent-bg);
-            border-color: rgba(232, 120, 36, .15);
+            border-color: rgba(29, 78, 216, .15);
         }
         .feat-card.accent .fc-num {
             opacity: .30;
@@ -884,7 +896,7 @@
         }
         .tl-row:hover .tl-dot {
             border-color: var(--accent);
-            box-shadow: 0 0 0 8px rgba(232, 120, 36, .06);
+            box-shadow: 0 0 0 8px rgba(29, 78, 216, .06);
             transform: translate(-50%, -50%) scale(1.06);
         }
         .tl-row .tl-content {
@@ -934,7 +946,7 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 50% 60% at 50% 40%, rgba(232, 120, 36, .10) 0%, transparent 65%);
+            background: radial-gradient(ellipse 50% 60% at 50% 40%, rgba(29, 78, 216, .10) 0%, transparent 65%);
         }
         .cta-finale h2 {
             font-family: var(--font-display);
@@ -961,8 +973,8 @@
             padding: clamp(36px, 6vw, 56px) 0 clamp(20px, 4vw, 28px);
         }
         .footer-risk {
-            background: rgba(232, 120, 36, .06);
-            border: 1px solid rgba(232, 120, 36, .16);
+            background: rgba(29, 78, 216, .06);
+            border: 1px solid rgba(29, 78, 216, .16);
             padding: clamp(20px, 4vw, 30px);
             border-radius: var(--radius-lg);
             margin-bottom: 28px;
@@ -1219,14 +1231,14 @@
             padding: 15px;
             font-size: 1rem;
             justify-content: center;
-            box-shadow: 0 4px 24px rgba(232, 120, 36, .40);
+            box-shadow: 0 4px 24px rgba(29, 78, 216, .40);
         }
         .mobile-float-btn .cta-hinweis {
             margin-top: 6px;
             font-size: 0.7rem;
             padding: 6px 10px;
-            background: #fef3ea;
-            border-left-color: #e87824;
+            background: #eef2ff;
+            border-left-color: var(--accent);
             text-align: center;
         }
     </style>
@@ -1266,11 +1278,9 @@
                     <h1>Starten Sie Ihre <em>Teilzeitarbeit</em> – direkt vom Smartphone aus</h1>
                     <p>Flexible Arbeit von zu Hause, frei einteilbare Arbeitszeiten, neue Fähigkeiten entwickeln.</p>
                     <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-                    <!-- CTA-Hinweis – Google Ads Compliance -->
+                    <!-- CTA-Hinweis – Google Ads Compliance (通用版本) -->
                     <div class="cta-hinweis">
-                        ⚠️ <strong>Hinweis:</strong> Die Einkünfte sind <strong>variabel</strong> und <strong>nicht garantiert</strong>.
-                        Es handelt sich um eine selbstständige Tätigkeit, keine Festanstellung.
-                        <span class="small">Ergebnisse hängen vom individuellen Engagement ab.</span>
+                        ⚠️ <strong>Hinweis:</strong> Variable Einkünfte – nicht garantiert. Selbstständige Tätigkeit, keine Festanstellung.
                     </div>
                 </div>
                 <div class="hero-image reveal">
@@ -1318,8 +1328,9 @@
                     </div>
                     <div style="margin-top:4px">
                         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
+                        <!-- CTA-Hinweis – Google Ads Compliance (通用版本) -->
                         <div class="cta-hinweis" style="margin-top:8px;">
-                            ⚠️ <strong>Hinweis:</strong> Kein garantiertes Einkommen – Selbstständige Tätigkeit.
+                            ⚠️ <strong>Hinweis:</strong> Variable Einkünfte – nicht garantiert. Selbstständige Tätigkeit, keine Festanstellung.
                         </div>
                     </div>
                 </div>
@@ -1355,7 +1366,6 @@
                     </div>
                     <div class="feat-card accent">
                         <div class="fc-num">04</div>
-                        <!-- "garantiert" entfernt, durch "transparent" ersetzt -->
                         <h3>Sicher, zuverlässig, transparent</h3>
                         <p>Die Plattform arbeitet mit geprüften Unternehmen zusammen, transparente Abrechnung, pünktliche Zahlung, keine versteckten Gebühren.</p>
                     </div>
@@ -1366,8 +1376,9 @@
                         <h3>Noch heute starten – ganz unkompliziert</h3>
                         <p>Sie brauchen nur Ihr Smartphone und Internet. Kein Lebenslauf, keine Vorstellungsgespräche, keine festen Arbeitszeiten.</p>
                         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
+                        <!-- CTA-Hinweis – Google Ads Compliance (通用版本) -->
                         <div class="cta-hinweis">
-                            ⚠️ <strong>Hinweis:</strong> Einkommen sind nicht garantiert und hängen von der individuellen Aktivität ab.
+                            ⚠️ <strong>Hinweis:</strong> Variable Einkünfte – nicht garantiert. Selbstständige Tätigkeit, keine Festanstellung.
                         </div>
                     </div>
                 </div>
@@ -1430,8 +1441,9 @@
                         <h3>Haben Sie weitere Fragen?</h3>
                         <p>Unser Support-Team hilft Ihnen gerne bei jedem Schritt weiter. Kontaktieren Sie uns per WhatsApp für persönliche Unterstützung.</p>
                         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
+                        <!-- CTA-Hinweis – Google Ads Compliance (通用版本) -->
                         <div class="cta-hinweis">
-                            ⚠️ <strong>Hinweis:</strong> Die Plattform garantiert kein Mindesteinkommen. Jede Aufgabe ist freiwillig und wird entsprechend ihrer Komplexität vergütet.
+                            ⚠️ <strong>Hinweis:</strong> Variable Einkünfte – nicht garantiert. Selbstständige Tätigkeit, keine Festanstellung.
                         </div>
                     </div>
                 </div>
@@ -1485,10 +1497,9 @@
                 <h2>Starten Sie jetzt Ihre Reise</h2>
                 <p>Schließen Sie sich Tausenden von Menschen an, die bereits von zu Hause aus Einkommen mit FlexWork Pro erzielen.</p>
                 <button class="btn btn-white" onclick="d2()">Jetzt starten →</button>
-                <!-- CTA-Hinweis im dunklen Hintergrund -->
+                <!-- CTA-Hinweis im dunklen Hintergrund (通用版本) -->
                 <div class="cta-hinweis dark" style="max-width:440px; margin:12px auto 0; text-align:left;">
-                    ⚠️ <strong>Hinweis:</strong> Selbstständige Tätigkeit – variable Einkünfte, keine Erfolgsgarantie.
-                    <span class="small">Voraussetzung: 23+ Jahre, Wohnsitz Kolumbien.</span>
+                    ⚠️ <strong>Hinweis:</strong> Variable Einkünfte – nicht garantiert. Selbstständige Tätigkeit, keine Festanstellung.
                 </div>
             </div>
         </section>
@@ -1596,8 +1607,9 @@
     <!-- ====== MOBILE FLOATING CTA ====== -->
     <div class="mobile-float-btn">
         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-        <div class="cta-hinweis" style="font-size:0.7rem; padding:6px 10px; background:#fef3ea; border-left-color:#e87824; text-align:center;">
-            ⚠️ Variable Einkünfte – keine Festanstellung.
+        <!-- CTA-Hinweis – Google Ads Compliance (通用版本) -->
+        <div class="cta-hinweis" style="font-size:0.7rem; padding:6px 10px; background:#eef2ff; border-left-color:var(--accent); text-align:center;">
+            ⚠️ <strong>Hinweis:</strong> Variable Einkünfte – nicht garantiert. Selbstständige Tätigkeit, keine Festanstellung.
         </div>
     </div>
 
