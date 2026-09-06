@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
- 
+
+   
 
     <script>
         function d2() {
@@ -1094,6 +1095,8 @@
                 margin-right: auto;
             }
         }
+
+        /* ====== 手机端专用样式 (≤ 768px) ====== */
         @media (max-width:768px) {
             .nav-links {
                 display: none;
@@ -1101,6 +1104,7 @@
             .mobile-menu-btn {
                 display: block;
             }
+
             .hero {
                 min-height: auto;
                 padding: calc(var(--nav-h) + 20px) 0 32px;
@@ -1112,10 +1116,11 @@
                 font-size: .9rem;
                 margin-bottom: 20px;
             }
-            /* 手机首屏图片放大：移除尺寸限制，撑满容器宽度，与第二张图片一致 */
+            /* 手机首屏图片撑满 */
             .hero-image {
                 max-width: 100% !important;
             }
+
             .feat-grid {
                 grid-template-columns: 1fr;
             }
@@ -1137,11 +1142,13 @@
             #faq h2 {
                 font-size: clamp(22px, 5vw, 30px);
             }
-            /* 手机底部固定悬浮按钮 - 在 768px 以下显示 */
+
+            /* 手机底部悬浮按钮 - 强制显示 */
             .mobile-float-btn {
-                display: block;
+                display: block !important;
             }
         }
+
         @media (max-width:480px) {
             :root {
                 --nav-h: 56px;
@@ -1156,7 +1163,6 @@
             .hero h1 {
                 font-size: clamp(24px, 7vw, 30px);
             }
-            /* 确保超小屏手机首屏图片同样撑满 */
             .hero-image {
                 max-width: 100% !important;
             }
@@ -1202,34 +1208,41 @@
             .tl-row:nth-child(even) .tl-content {
                 margin-left: 42px;
             }
+
+            /* 确保超小屏也显示 */
+            .mobile-float-btn {
+                display: block !important;
+            }
         }
 
         /* ========== MOBILE FLOATING CTA ========== */
         .mobile-float-btn {
-            display: none;
+            display: none;  /* 默认隐藏，仅手机显示 */
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            z-index: 95;
-            padding: 10px 16px 14px;
+            z-index: 9999;  /* 确保在最顶层 */
+            padding: 12px 16px 16px;
             background: linear-gradient(0deg, rgba(255, 255, 255, .98) 70%, rgba(255, 255, 255, 0) 100%);
             text-align: center;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.08);
         }
         .mobile-float-btn .btn {
             width: 100%;
             max-width: 420px;
-            padding: 15px;
-            font-size: 1rem;
+            padding: 16px 20px;
+            font-size: 1.05rem;
             justify-content: center;
             box-shadow: 0 4px 24px rgba(29, 78, 216, .40);
             /* 呼吸特效：2秒循环，缩放+阴影脉动 */
             animation: breathe 2s ease-in-out infinite;
         }
         .mobile-float-btn .cta-hinweis {
-            margin-top: 6px;
+            margin-top: 8px;
             font-size: 0.7rem;
-            padding: 6px 10px;
+            padding: 6px 12px;
             background: #eef2ff;
             border-left-color: var(--accent);
             text-align: center;
@@ -1242,7 +1255,7 @@
                 box-shadow: 0 4px 24px rgba(29, 78, 216, .40);
             }
             50% {
-                transform: scale(1.03);
+                transform: scale(1.04);
                 box-shadow: 0 8px 40px rgba(29, 78, 216, .60);
             }
             100% {
@@ -1278,7 +1291,7 @@
 
     <main id="main-content">
 
-        <!-- ====== 1. HERO – mit sichtbarem CTA-Hinweis ====== -->
+        <!-- ====== 1. HERO ====== -->
         <section class="hero">
             <div class="container">
                 <div class="hero-text reveal">
@@ -1510,7 +1523,7 @@
 
     </main>
 
-    <!-- ====== FOOTER – mit ausführlichem Disclaimer ====== -->
+    <!-- ====== FOOTER ====== -->
     <footer id="footer-disclaimer">
         <div class="container">
             <div class="footer-risk">
@@ -1555,7 +1568,6 @@
             b.textContent = '☰';
         }
 
-        /* FAQ 2-col */
         var faqData = [
             { q: 'Welche Voraussetzungen muss ich erfüllen?', a: 'Sie benötigen lediglich ein Smartphone, eine stabile Internetverbindung und Zuverlässigkeit. Keine besonderen beruflichen Fähigkeiten erforderlich.' },
             { q: 'Ist die Arbeit legal und regelkonform?', a: 'Wir arbeiten mit geprüften Unternehmen zusammen, alle Aufgaben entsprechen den geltenden Gesetzen und Vorschriften – Sicherheit und Zuverlässigkeit sind gewährleistet.' },
@@ -1573,7 +1585,6 @@
                 faqData[i].q + '</div><div class="faq-a-body">' + faqData[i].a + '</div></div>';
         });
 
-        /* Smooth scroll */
         document.querySelectorAll('a[href^="#"]').forEach(function(a) {
             a.addEventListener('click', function(e) {
                 e.preventDefault();
@@ -1583,18 +1594,15 @@
             });
         });
 
-        /* Header scroll */
         var h = document.getElementById('header');
         window.addEventListener('scroll', function() { h.classList.toggle('scrolled', window.scrollY > 20); }, { passive: true });
 
-        /* Close mobile menu on outside click */
         document.addEventListener('click', function(e) {
             var n = document.getElementById('mobileNav'),
                 b = document.querySelector('.mobile-menu-btn');
             if (n.classList.contains('active') && !n.contains(e.target) && !b.contains(e.target)) closeMobileMenu();
         });
 
-        /* Scroll reveal */
         (function() {
             var o = new IntersectionObserver(function(e) {
                 e.forEach(function(el, i) {
@@ -1611,9 +1619,7 @@
     <!-- ====== MOBILE FLOATING CTA ====== -->
     <div class="mobile-float-btn">
         <button class="btn btn-primary" onclick="d2()">Jetzt starten →</button>
-        <div class="cta-hinweis" style="font-size:0.7rem; padding:6px 10px; background:#eef2ff; border-left-color:var(--accent); text-align:center;">
-            ⚠️ <strong>Hinweis:</strong> Individuelle Ergebnisse hängen von Engagement, Zeit und Marktbedingungen ab. Frühere Erfolge anderer sind nicht repräsentativ.
-        </div>
+     
     </div>
 
 </body>
